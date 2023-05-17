@@ -77,34 +77,34 @@ export default function Now(currentlyReading) {
     return () => clearInterval(timer)
   }, [])
 
-  var ParthBirthDate = '2000-04-16'
-  var birthDate = new Date(ParthBirthDate)
+  var JSBirthDate = '1995-11-08'
+  var birthDate = new Date(JSBirthDate)
 
-  var ParthAge = year - birthDate.getFullYear()
+  var JSAge = year - birthDate.getFullYear()
 
-  var ParthMonth = 0
-  if (month >= birthDate.getMonth()) ParthMonth = month - birthDate.getMonth()
+  var JSMonth = 0
+  if (month >= birthDate.getMonth()) JSMonth = month - birthDate.getMonth()
   else {
-    ParthAge--
-    ParthMonth = 12 + month - birthDate.getMonth()
+    JSAge--
+    JSMonth = 12 + month - birthDate.getMonth()
   }
 
-  var ParthDay = 0
-  if (date >= birthDate.getDate()) ParthDay = date - birthDate.getDate()
+  var JSDay = 0
+  if (date >= birthDate.getDate()) JSDay = date - birthDate.getDate()
   else {
-    ParthMonth--
-    ParthDay = 31 + date - birthDate.getDate()
-    if (ParthMonth < 0) {
-      ParthMonth = 11
-      ParthAge--
+    JSMonth--
+    JSDay = 31 + date - birthDate.getDate()
+    if (JSMonth < 0) {
+      JSMonth = 11
+      JSAge--
     }
   }
 
   var age = {}
   age = {
-    years: ParthAge,
-    months: ParthMonth,
-    days: ParthDay,
+    years: JSAge,
+    months: JSMonth,
+    days: JSDay,
   }
 
   var ageString = ''
@@ -141,12 +141,13 @@ export default function Now(currentlyReading) {
         <div>
           <div className="flex justify-between gap-5">
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Location:</span> <span>Ahmedabad, India</span>
+              <span className="ml-2 font-semibold">Location:</span>{' '}
+              <span>Kitchener, Ontario, Canada</span>
               <br />
               <span className="ml-2 font-semibold">Weather:</span>{' '}
               <span>
                 <a
-                  href="https://weather.com/en-GB/weather/today/l/f42d9f8baa19b4d8d5e034449faa703839993366f64551a56a2b530297075dc2"
+                  href="https://weather.com/en-GB/weather/today/l/9f429c50d96f2e1934370d637216066de5f478bf32306fef46f7fa21612e32f9"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="underline-offset-1 hover:underline"
@@ -212,42 +213,23 @@ export default function Now(currentlyReading) {
         </div>
         {/* Work */}
         <div className="pb-4">
-          <p>
-            I work as a Data Engineer at{' '}
-            <Link
-              href={'https://www.accenture.com/'}
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              Accenture
-            </Link>
-            .
-          </p>
+          <p>I work as a Data Scientist.</p>
+          <br />
+          <p>I work on building pipelines and automating the entire process.</p>
           <br />
           <p>
-            I work on building pipelines and automating the entire process using Scala and Gcloud.
-          </p>
-          <br />
-          <p>
-            I have been trying to shift my field from Data Engineering to Data Science. I have been
+            I have been trying to shift my field from Data Science to Data Engineering. I have been
             constantly applying for the same as well.
           </p>
           <br />
           <p>
-            My location preference is Bangalore but I am open to shift to another place for a better
-            opportunity.
+            My location preference is Toronto or Kitchener/Waterloo but I am open to shift to
+            another place for a better opportunity.
           </p>
           <br />
           <p>
-            I'm always trying to learn more, and at the moment I'm trying to follow this{' '}
-            <Link
-              href={
-                'https://www.youtube.com/watch?v=_u-PaJCpwiU&list=PLu0W_9lII9ai6fAMHp-acBmJONT7Y4BSG'
-              }
-              className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
-            >
-              Machine Learning tutorial
-            </Link>
-            .
+            I'm always trying to learn more, and am constantly researching new techniques and
+            methods.
           </p>
         </div>
         <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
@@ -260,7 +242,7 @@ export default function Now(currentlyReading) {
             I've been slowly building this website, trying to share interesting things with anyone
             who wants to read it.{' '}
             <Link
-              href={'https://www.swyx.io/learn-in-public'}
+              href={'https://medium.com/@racheltho/why-you-yes-you-should-blog-7d2544ac1045'}
               className="special-underline no-underline dark:text-gray-100 hover:dark:text-gray-100"
             >
               This
@@ -268,16 +250,6 @@ export default function Now(currentlyReading) {
             article is a great reason to start your blog.
           </p>
           <br />
-          <p>
-            I am also going to start applying for Masters in Data Science in August 2022 for intake
-            of Fall 2023. I hope to get a good university near the West Coast. I'll update this page
-            after I get my admits.
-          </p>
-          <br />
-          <p>
-            I recently started to draft a post about my new Obsidian worklfow, it will be a good
-            one!
-          </p>
         </div>
         <div className="mt-3 text-sm">
           For more examples of folks with /now pages, check out{' '}

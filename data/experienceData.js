@@ -1,29 +1,27 @@
 const experienceData = [
   {
-    title: 'Data Engineering Intern',
-    company: 'Accenture',
-    location: 'Ahmedabad, India',
-    range: 'January 2022 - May 2022',
-    url: 'https://www.accenture.com/gr-en/about/consulting-index',
+    title: 'Data Analyst Intern',
+    company: 'Quantium Analytics',
+    location: 'Remote',
+    range: 'April 2023 - May 2023',
+    url: 'https://quantium.com/',
     text1:
-      'Helped with the digital transformation of BOAT by working on their platform called ByteETL.',
+      'Conducted analysis on client transaction data to identify customer purchasing behaviour and generated targeted commercial recommendations for store strategy',
     text2:
-      'Built the encryption component for the platform using Scala and Spark which included 2 encoding functionalities : ENCRYPT and HASH.',
-    text3:
-      'Created JSON wrappers for the encryption components and automated and triggered the pipelines to run at specific intervals using CronJob.',
+      'Performed segmentation and clustering on customer purchasing data, as well as uplift modelling to identify benchmark stores to test the impact of trial store layouts on customer sales',
   },
   {
-    title: 'Software Engineer Analytics',
-    company: 'HOPS Healthcare',
-    location: 'Ahmedabad, India',
-    range: 'March 2021 - June 2021',
-    url: 'https://hops.healthcare/',
+    title: 'Data Scientist',
+    company: 'Region of Waterloo',
+    location: 'Waterloo, Ontario, Canada',
+    range: 'October 2022 - March 2023',
+    url: 'https://www.regionofwaterloo.ca/en/index.aspx',
     text1:
-      'Guided by Mr. Vivek Patel, to create a pipeline that extracts essential information from informal conversations.',
+      'Created a data extraction pipeline to obtain water main break information from GeoJSON API and loads it into a SQL database and utilizes Prefect for cron scheduling.',
     text2:
-      'Worked on creating a web app for their healthcare system for doctors to analyze and save reports.',
+      'Implemented feature engineering & advanced modelling techniques to predict water main break frequency.',
     text3:
-      'Developed functions for automatically extracting important elements from reports using BioBERT and Regex.',
+      'Developed a Streamlit web app to visualize the results of the model and provide insights to the Region of Waterloo.',
   },
 ]
 
