@@ -15,7 +15,7 @@ const siteMetadata = {
   github: 'https://github.com/js3lliott',
   twitter: 'https://twitter.com/samekjordan',
   linkedin: 'https://www.linkedin.com/in/jordan-samek/',
-  website: 'https://js3lliott-io.vercel.app/',
+  website: 'https://jsamek.vercel.app',
   locale: 'en-US',
   analytics: {
     plausibleDataDomain: '', // e.g. tailwind-nextjs-starter-blog.vercel.app
