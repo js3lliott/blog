@@ -3,7 +3,6 @@ import { PageSEO } from '@/components/SEO'
 import { dayjs } from '@/components/DayJS'
 import { useEffect, useState } from 'react'
 import siteMetadata from '@/data/siteMetadata'
-import { getCurrentlyReading } from '@/lib/goodreads'
 import fetcher from 'lib/fetcher'
 import useSWR from 'swr'
 import { FaCloudShowersHeavy } from 'react-icons/fa'
@@ -27,10 +26,8 @@ export const getServerSideProps = async () => {
   )
   const data = await response.json()
 
-  const currentlyReading = await getCurrentlyReading({ limit: 1 })
-
   return {
-    props: { currentlyReading, data },
+    props: { data },
   }
 }
 
@@ -160,17 +157,6 @@ export default function Now(currentlyReading) {
             </div>
 
             <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
-              <span className="ml-2 font-semibold">Reading:</span>{' '}
-              <a
-                href={currentlyReadingData[0].url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline-offset-1 hover:underline"
-              >
-                <span>{currentlyReadingData[0].title}</span> by{' '}
-                <span>{currentlyReadingData[0].author}</span>
-              </a>
-              <br />
               <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
             </div>
           </div>
