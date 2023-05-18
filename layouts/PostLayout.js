@@ -13,8 +13,6 @@ import {
   TwitterShareButton,
   EmailShareButton,
   LinkedinShareButton,
-  RedditShareButton,
-  WhatsappShareButton,
 } from 'react-share'
 import { SocialIcon } from 'react-social-icons'
 import { HiOutlinePencil, HiOutlineClock, HiOutlineEye } from 'react-icons/hi'
@@ -181,31 +179,6 @@ export default function PostLayout({ frontMatter, authorDetails, next, prev, chi
                       bgColor="#0072b1"
                     />
                   </LinkedinShareButton>
-                  <RedditShareButton
-                    title={title}
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#ff4500] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="reddit"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#ff4500"
-                    />
-                  </RedditShareButton>
-                  <WhatsappShareButton
-                    title={title}
-                    separator={' : '}
-                    url={postUrl}
-                    className="flex items-center overflow-hidden rounded-full !bg-[#25D366] hover:scale-110"
-                  >
-                    <SocialIcon
-                      network="whatsapp"
-                      style={{ height: 35, width: 35 }}
-                      fgColor="#fff"
-                      bgColor="#25D366"
-                    />
-                  </WhatsappShareButton>
                   <Link
                     href={editUrl(fileName)}
                     className="flex items-center overflow-hidden rounded-full !bg-[#5A6272] hover:scale-110"

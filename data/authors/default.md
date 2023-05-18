@@ -2,7 +2,7 @@
 name: Jordan Samek
 avatar: /static/images/avatar.png
 occupation: Data Scientist
-company: Exploring
+company: Forever Exploring
 email: jordan.samek@gmail.com
 twitter: https://twitter.com/samekjordan
 linkedin: https://www.linkedin.com/in/jordan-samek/

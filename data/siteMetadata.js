@@ -6,7 +6,7 @@ const siteMetadata = {
   snippets: 'Reuseable code snippets collected by me',
   language: 'en-us',
   theme: 'system', // system, dark or light
-  siteUrl: 'https://js3lliott-io.vercel.app/',
+  siteUrl: 'https://jsamek.vercel.app/',
   siteRepo: 'https://github.com/js3lliott/blog',
   siteLogo: '/static/images/logo.png',
   image: '/static/images/avatar.png',
