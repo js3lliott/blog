@@ -38,9 +38,9 @@ Router.onRouteChangeError = () => {
 const defaultTheme = {
   colors: {
     primary: '#71717a',
-    secondary: '#ff00c3',
+    secondary: '#00bbff',
     text: '#fff',
-    highlight: '#ff00c3',
+    highlight: '#00bbff',
     icon: '#fff',
     background: 'transparent',
   },
