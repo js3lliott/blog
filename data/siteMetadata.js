@@ -2,7 +2,7 @@ const siteMetadata = {
   title: 'Blog | Jordan Samek',
   author: 'Jorda Samek',
   headerTitle: 'My thoughts and experiments',
-  description: 'My personal blog where I share my thoughts',
+  description: 'my personal blog where I share my thoughts',
   snippets: 'Reuseable code snippets collected by me',
   language: 'en-us',
   theme: 'system', // system, dark or light
