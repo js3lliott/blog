@@ -56,7 +56,7 @@
 }
 
 .token.punctuation {
-  color: rgb(199, 146, 234);
+  color: rgb(130, 170, 255);
 }
 
 .namespace {
@@ -96,7 +96,7 @@
 
 .token.selector,
 .token.doctype {
-  color: rgb(199, 146, 234);
+  color: rgb(146, 174, 234);
   font-style: italic;
 }
 
