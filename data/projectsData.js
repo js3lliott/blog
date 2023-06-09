@@ -10,6 +10,16 @@ const projectsData = [
     tech3: 'Streamlit',
   },
   {
+    title: 'Instacart Market Basket Analysis',
+    description: `This project applies Market Basket Analysis on the Instacart Online Grocery Shopping dataset using Databricks, Spark, and Spark SQL, ingests data through an ETL pipeline, performs exploratory analysis and employs machine learning with PySpark and Scala to discover frequent itemsets, informing purchase recommendations.`,
+    imgSrc: '',
+    href: '',
+    github: 'https://github.com/js3lliott/instacart-basket-analysis',
+    tech1: 'Apach Spark',
+    tech2: 'Scala',
+    tech3: 'Databricks',
+  },
+  {
     title: 'DoorDash Delivery Duration Prediction',
     description: `The aim of this project is to predict the delivery duration of DoorDash orders. The model is trained on deliveries made in 2015 and utilizes classical regression techniques as well as boosted tree regressors.`,
     imgSrc: '',
@@ -38,16 +48,6 @@ const projectsData = [
     tech1: 'Data Analysis',
     tech2: 'Pandas',
     tech3: 'Uplift Modelling',
-  },
-  {
-    title: '',
-    description: ``,
-    imgSrc: '',
-    href: '',
-    github: '',
-    tech1: '',
-    tech2: '',
-    tech3: '',
   },
 ]
 
