@@ -3,7 +3,7 @@ const projectsData = [
     title: 'Water Main Break Prediction',
     description: `The Water Main Break Prediction is a web application which predicts the probability of water main breaks for the municipality of Kitchener-Waterloo. It is made using Streamlit and deployed on Heroku.`,
     imgSrc: '',
-    href: 'https://pipe-break-prediction.streamlit.app/',
+    href: 'https://pipe-break-e3ce3f38ce71.herokuapp.com/',
     github: 'https://github.com/js3lliott/water-main-break-prediction-KW',
     tech1: 'Pandas',
     tech2: 'Scikit-learn',
