@@ -26,88 +26,70 @@ module.exports = {
       },
       fontFamily: {
         sans: ['Inter', ...defaultTheme.fontFamily.sans],
-      },
-      gradientColorStops: {
-        // https://coolors.co/2d00f7-6a00f4-8900f2-a100f2-b100e8-bc00dd-d100d1-db00b6-e500a4-f20089
-        'gradient-1-start': '#F20089',
-        'gradient-1-end': '#D100D1',
-        'gradient-2-start': '#D100D1',
-        'gradient-2-end': '#A100F2',
-        'gradient-3-start': '#A100F2',
-        'gradient-3-end': '#2D00F7',
+        serif: ['ui-serif', 'Georgia', 'Iowan Old Style', 'Times New Roman', 'serif'],
+        mono: [
+          'ui-monospace',
+          'SF Mono',
+          'Cascadia Mono',
+          'Roboto Mono',
+          ...defaultTheme.fontFamily.mono,
+        ],
       },
       colors: {
-        primary: {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#028BF2',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
-        },
-        'primary-color': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#028BF2',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
-        },
-        'primary-color-dark': {
-          100: '#FDD1D9',
-          200: '#FBA4BC',
-          300: '#F575A5',
-          400: '#EB519B',
-          500: '#028BF2',
-          600: '#BE1588',
-          700: '#9F0E7F',
-          800: '#800972',
-          900: '#6A0568',
-        },
-        'background-color': '#000',
-        green: colors.emerald,
+        // "Lab Notebook" palette — warm paper ground, graphite ink, a single
+        // muted teal accent, and a copper highlight used sparingly for emphasis.
+        paper: '#F6F4EE',
+        'paper-dark': '#14140F',
+        card: '#FFFEFA',
+        'card-dark': '#1A1A14',
+        ink: '#23241F',
+        'ink-dark': '#EDEAE0',
+        'ink-soft': '#5B5A4E',
+        'ink-soft-dark': '#A9A594',
+        rule: '#D9D4C2',
+        'rule-dark': '#35342A',
+        accent: '#2B6E6E',
+        'accent-dark': '#5FB3B3',
+        'accent-soft': '#E4EEEC',
+        'accent-soft-dark': '#1B2C2A',
+        highlight: '#A8763E',
+        'highlight-dark': '#D6A36B',
         gray: colors.neutral,
       },
       typography: (theme) => ({
         DEFAULT: {
           css: {
-            color: theme('colors.gray.700'),
+            color: theme('colors.ink-soft'),
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.accent'),
               '&:hover': {
-                color: `${theme('colors.primary.500')}`,
+                color: theme('colors.accent'),
               },
-              code: { color: theme('colors.primary.400') },
+              code: { color: theme('colors.accent') },
             },
             h1: {
-              fontWeight: '700',
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.ink'),
             },
             h2: {
-              fontWeight: '700',
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.900'),
+              color: theme('colors.ink'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.900'),
+              color: theme('colors.ink'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.900'),
+              color: theme('colors.ink'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.ink'),
             },
             code: {
-              color: theme('colors.green.500'),
-              backgroundColor: theme('colors.gray.100'),
+              color: theme('colors.accent'),
+              backgroundColor: theme('colors.accent-soft'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
@@ -121,187 +103,90 @@ module.exports = {
               content: 'none',
             },
             details: {
-              backgroundColor: theme('colors.gray.100'),
+              backgroundColor: theme('colors.accent-soft'),
               paddingLeft: '4px',
               paddingRight: '4px',
               paddingTop: '2px',
               paddingBottom: '2px',
               borderRadius: '0.25rem',
             },
-            hr: { borderColor: theme('colors.gray.200') },
+            hr: { borderColor: theme('colors.rule') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.gray.500'),
+              color: theme('colors.ink-soft'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.500'),
+              backgroundColor: theme('colors.ink-soft'),
             },
-            strong: { color: theme('colors.gray.600') },
+            strong: { color: theme('colors.ink') },
             blockquote: {
-              color: theme('colors.gray.900'),
-              borderLeftColor: theme('colors.gray.200'),
+              color: theme('colors.ink'),
+              borderLeftColor: theme('colors.highlight'),
             },
           },
         },
         dark: {
           css: {
-            color: theme('colors.gray.300'),
+            color: theme('colors.ink-soft-dark'),
             a: {
-              color: theme('colors.primary.500'),
+              color: theme('colors.accent-dark'),
               '&:hover': {
-                color: `${theme('colors.primary.500')} `,
+                color: theme('colors.accent-dark'),
               },
-              code: { color: theme('colors.primary.400') },
+              code: { color: theme('colors.accent-dark') },
             },
             h1: {
-              fontWeight: '700',
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.ink-dark'),
             },
             h2: {
-              fontWeight: '700',
+              fontWeight: '600',
               letterSpacing: theme('letterSpacing.tight'),
-              color: theme('colors.gray.100'),
+              color: theme('colors.ink-dark'),
             },
             h3: {
               fontWeight: '600',
-              color: theme('colors.gray.100'),
+              color: theme('colors.ink-dark'),
             },
             'h4,h5,h6': {
-              color: theme('colors.gray.100'),
+              color: theme('colors.ink-dark'),
             },
             pre: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.card-dark'),
             },
             code: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.accent-soft-dark'),
             },
             details: {
-              backgroundColor: theme('colors.gray.800'),
+              backgroundColor: theme('colors.accent-soft-dark'),
             },
-            hr: { borderColor: theme('colors.gray.700') },
+            hr: { borderColor: theme('colors.rule-dark') },
             'ol li::marker': {
               fontWeight: '600',
-              color: theme('colors.gray.400'),
+              color: theme('colors.ink-soft-dark'),
             },
             'ul li::marker': {
-              backgroundColor: theme('colors.gray.400'),
+              backgroundColor: theme('colors.ink-soft-dark'),
             },
-            strong: { color: theme('colors.gray.100') },
+            strong: { color: theme('colors.ink-dark') },
             thead: {
               th: {
-                color: theme('colors.gray.100'),
+                color: theme('colors.ink-dark'),
               },
             },
             tbody: {
               tr: {
-                borderBottomColor: theme('colors.gray.700'),
+                borderBottomColor: theme('colors.rule-dark'),
               },
             },
             blockquote: {
-              color: theme('colors.gray.100'),
-              borderLeftColor: theme('colors.gray.700'),
+              color: theme('colors.ink-dark'),
+              borderLeftColor: theme('colors.highlight-dark'),
             },
           },
         },
       }),
-      keyframes: {
-        shrink: {
-          '0% , 100%': {
-            height: '0.75rem',
-          },
-          '50%': {
-            height: '0.375rem',
-          },
-        },
-        'bg-hue-animation': {
-          '0%': { filter: 'hue-rotate(0deg)' },
-          '50%': { filter: 'hue-rotate(180deg)' },
-          '100%': { filter: 'hue-rotate(0deg)' },
-        },
-        'fade-away': {
-          '0%': {
-            opacity: 1,
-          },
-          '100%': {
-            opacity: 0.2,
-          },
-        },
-        expand: {
-          '0% , 100%': {
-            height: '0.375rem',
-          },
-          '50%': {
-            height: '0.75rem',
-          },
-        },
-        'gradient-foreground-1': {
-          '0%, 16.667%, 100%': {
-            opacity: 1,
-          },
-          '33.333%, 83.333%': {
-            opacity: 0,
-          },
-        },
-        'gradient-background-1': {
-          '0%, 16.667%, 100%': {
-            opacity: 0,
-          },
-          '25%, 91.667%': {
-            opacity: 1,
-          },
-        },
-        'gradient-foreground-2': {
-          '0%, 100%': {
-            opacity: 0,
-          },
-          '33.333%, 50%': {
-            opacity: 1,
-          },
-          '16.667%, 66.667%': {
-            opacity: 0,
-          },
-        },
-        'gradient-background-2': {
-          '0%, to': {
-            opacity: 1,
-          },
-          '33.333%, 50%': {
-            opacity: 0,
-          },
-          '25%, 58.333%': {
-            opacity: 1,
-          },
-        },
-        'gradient-foreground-3': {
-          '0%, 50%, 100%': {
-            opacity: 0,
-          },
-          '66.667%, 83.333%': {
-            opacity: 1,
-          },
-        },
-        'gradient-background-3': {
-          '0%, 58.333%, 91.667%, 100%': {
-            opacity: 1,
-          },
-          '66.667%, 83.333%': {
-            opacity: 0,
-          },
-        },
-      },
-      animation: {
-        'fade-text': '10s ease-in-out 3s 1 normal forwards running fade-away',
-        shrink: 'shrink ease-in-out 1.5s infinite',
-        expand: 'expand ease-in-out 1.5s infinite',
-        'hue-animation': 'bg-hue-animation 10s infinite',
-        'gradient-background-1': 'gradient-background-1 8s infinite',
-        'gradient-foreground-1': 'gradient-foreground-1 8s infinite',
-        'gradient-background-2': 'gradient-background-2 8s infinite',
-        'gradient-foreground-2': 'gradient-foreground-2 8s infinite',
-        'gradient-background-3': 'gradient-background-3 8s infinite',
-        'gradient-foreground-3': 'gradient-foreground-3 8s infinite',
-      },
     },
   },
   plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],

@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+html,
+body {
+  @apply bg-paper dark:bg-paper-dark;
+}
+
 .task-list-item::before {
   @apply hidden;
 }
@@ -20,37 +25,37 @@
 
 @layer utilities {
   .special-underline {
-    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat pb-0.5
+    @apply bg-gradient-to-r from-accent to-accent bg-no-repeat pb-0.5
       font-normal [background-position:0_100%]
       [background-size:100%_0.2em]
-      hover:text-white hover:[background-size:100%_100%]
+      hover:text-paper hover:[background-size:100%_100%]
       focus:[background-size:100%_100%]
       motion-safe:transition-all
       motion-safe:duration-300
-      dark:from-primary-color-dark-500 dark:to-primary-color-dark-500 dark:hover:text-white;
+      dark:from-accent-dark dark:to-accent-dark dark:hover:text-ink;
   }
 
   .special-underline-new {
-    @apply bg-gradient-to-r from-primary-color-500 to-primary-color-500 bg-no-repeat pb-1
+    @apply bg-gradient-to-r from-accent to-accent bg-no-repeat pb-1
       font-normal [background-position:0_100%]
       [background-size:100%_0.1em]
-      hover:text-white hover:[background-size:100%_100%]
+      hover:text-paper hover:[background-size:100%_100%]
       focus:[background-size:100%_100%]
       motion-safe:transition-all
       motion-safe:duration-300
-      dark:from-primary-color-dark-500 dark:to-primary-color-dark-500 dark:hover:text-white;
+      dark:from-accent-dark dark:to-accent-dark dark:hover:text-ink;
   }
 
   .company {
-    box-shadow: inset 0 0 0 0 #1d74de;
-    color: #1d74de;
+    box-shadow: inset 0 0 0 0 #2b6e6e;
+    color: #2b6e6e;
     margin: 0 -0.25rem;
     padding: 0 0.25rem;
     transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   }
   .company:hover {
-    box-shadow: inset 200px 0 0 0 #1d74de;
-    color: white;
+    box-shadow: inset 200px 0 0 0 #2b6e6e;
+    color: #f6f4ee;
   }
 }
 
@@ -65,11 +70,14 @@ input:-webkit-autofill:focus {
 }
 
 ::-moz-selection {
-  background: #1d74de;
+  background: #a8763e;
+  color: #f6f4ee;
 }
 ::-webkit-selection {
-  background: #1d74de;
+  background: #a8763e;
+  color: #f6f4ee;
 }
 ::selection {
-  background: #1d74de;
+  background: #a8763e;
+  color: #f6f4ee;
 }

@@ -6,67 +6,46 @@ import Footer from './Footer'
 import { navigation } from '@/data/nav'
 import CommandPalette from './CommandPalette'
 import ThemeSwitch from './ThemeSwitch'
-import Typewriter from 'typewriter-effect'
-import { useRouter } from 'next/router'
 import DropMenu from './DropMenu.js'
-// import Logo from '@/data/logo.svg'
-// import MobileNav from './MobileNav'
+import MobileNav from './MobileNav'
 
 const LayoutWrapper = ({ children }) => {
-  const router = useRouter()
-
   return (
-    <SectionContainer>
-      <div className="flex h-screen flex-col justify-between">
-        <header className="flex items-center justify-between py-10">
-          <div>
+    <div className="min-h-screen bg-paper text-ink dark:bg-paper-dark dark:text-ink-dark">
+      <SectionContainer>
+        <div className="flex min-h-screen flex-col">
+          <header className="flex items-baseline justify-between border-b border-rule py-8 dark:border-rule-dark">
             <Link href="/" aria-label={siteMetadata.headerTitle}>
-              {/* <div className="flex items-center justify-between">
-                <div className="mr-1">
-                  <Logo />
-                </div>
-                {typeof siteMetadata.headerTitle === 'string' ? (
-                  <div className="hidden h-6 text-2xl font-semibold sm:block">
-                    {siteMetadata.headerTitle}
-                  </div>
-                ) : (
-                  siteMetadata.headerTitle
-                )}
-              </div> */}
-              <div className="text-primary-color dark:text-primary-color-dark flex items-center justify-between text-xl font-semibold">
-                {`~${router.asPath}`}{' '}
-                <Typewriter
-                  options={{
-                    strings: [],
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-              </div>
+              <span className="font-mono text-xs uppercase tracking-[0.14em] text-ink-soft dark:text-ink-soft-dark">
+                J. Samek <span className="text-highlight dark:text-highlight-dark">&middot;</span>{' '}
+                Field Notes
+              </span>
             </Link>
-          </div>
-          <div className="flex items-center text-base leading-5">
-            <div className="hidden sm:block">
-              {headerNavLinks.map((link) => (
-                <Link
-                  key={link.title}
-                  href={link.href}
-                  className="link-underline rounded py-1 px-2 text-gray-900 hover:bg-gray-200 dark:text-gray-100 dark:hover:bg-gray-700 sm:py-2 sm:px-3"
-                >
-                  {link.title}
-                </Link>
-              ))}
+            <div className="flex items-center gap-1">
+              <nav className="mr-2 hidden items-center gap-6 sm:flex">
+                {headerNavLinks.map((link) => (
+                  <Link
+                    key={link.title}
+                    href={link.href}
+                    className="text-sm text-ink-soft transition-colors hover:text-accent dark:text-ink-soft-dark dark:hover:text-accent-dark"
+                  >
+                    {link.title}
+                  </Link>
+                ))}
+              </nav>
+              <CommandPalette navigation={navigation} />
+              <ThemeSwitch />
+              <span className="hidden sm:inline-block">
+                <DropMenu />
+              </span>
+              <MobileNav />
             </div>
-            <CommandPalette navigation={navigation} />
-            <ThemeSwitch />
-            <DropMenu />
-            {/* <MobileNav /> */}
-          </div>
-        </header>
-        <main className="mb-auto">{children}</main>
-        <Footer />
-      </div>
-    </SectionContainer>
+          </header>
+          <main className="flex-1">{children}</main>
+          <Footer />
+        </div>
+      </SectionContainer>
+    </div>
   )
 }
 

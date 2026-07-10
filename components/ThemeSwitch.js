@@ -8,18 +8,18 @@ const ThemeSwitch = () => {
   const [mounted, setMounted] = useState(false)
   const { theme, setTheme, resolvedTheme } = useTheme()
 
-  // When mounted on client, now we can show the UI
   useEffect(() => setMounted(true), [])
 
   const [ThemeSound] = useSound('/static/sounds/switch-on.mp3')
 
-  const ThemeSwitch = () => {
+  const toggleTheme = () => {
     setTheme(theme === 'dark' || resolvedTheme === 'dark' ? 'light' : 'dark')
   }
+
   return (
-    <div className="ml-1 cursor-pointer rounded-full bg-zinc-300 ring-zinc-400 transition-all hover:bg-zinc-300 hover:ring-1 dark:bg-zinc-700 dark:ring-white dark:hover:bg-zinc-800">
+    <div className="ml-1 cursor-pointer rounded-full border border-rule bg-card transition-all hover:border-accent dark:border-rule-dark dark:bg-card-dark dark:hover:border-accent-dark">
       <motion.button
-        className="flex h-8 w-8 items-center justify-center p-2"
+        className="flex h-8 w-8 items-center justify-center p-2 text-ink-soft dark:text-ink-soft-dark"
         whileTap={{
           scale: 0.7,
           rotate: 360,
@@ -29,14 +29,14 @@ const ThemeSwitch = () => {
         aria-label="Toggle Dark Mode"
         type="button"
         onClick={() => {
-          ThemeSwitch()
+          toggleTheme()
           ThemeSound()
         }}
       >
         {mounted && (theme === 'dark' || resolvedTheme === 'dark') ? (
-          <HiSun className="h-4 w-4 hover:animate-spin" />
+          <HiSun className="h-4 w-4" />
         ) : (
-          <HiMoon className="h-4 w-4 hover:animate-spin" />
+          <HiMoon className="h-4 w-4" />
         )}
       </motion.button>
     </div>

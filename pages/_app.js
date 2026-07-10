@@ -12,8 +12,6 @@ import LayoutWrapper from '@/components/LayoutWrapper'
 import { ClientReload } from '@/components/ClientReload'
 import ProgressBar from 'react-scroll-progress-bar'
 import ScrollTop from '@/components/ScrollTop'
-import { SessionProvider } from 'next-auth/react'
-import { Provider } from '@lyket/react'
 
 const isDevelopment = process.env.NODE_ENV === 'development'
 const isSocket = process.env.SOCKET
@@ -21,50 +19,29 @@ const isSocket = process.env.SOCKET
 NProgress.configure({ showSpinner: false })
 
 Router.onRouteChangeStart = () => {
-  // console.log('onRouteChangeStart triggered');
   NProgress.start()
 }
 
 Router.onRouteChangeComplete = () => {
-  // console.log('onRouteChangeComplete triggered');
   NProgress.done()
 }
 
 Router.onRouteChangeError = () => {
-  // console.log('onRouteChangeError triggered');
   NProgress.done()
 }
 
-const defaultTheme = {
-  colors: {
-    primary: '#71717a',
-    secondary: '#00bbff',
-    text: '#fff',
-    highlight: '#00bbff',
-    icon: '#fff',
-    background: 'transparent',
-  },
-  fonts: {
-    body: 'inherit',
-  },
-}
-
-export default function App({ Component, pageProps: { session, ...pageProps } }) {
+export default function App({ Component, pageProps }) {
   return (
-    <SessionProvider session={session}>
-      <Provider apiKey="pt_7c8b6840f5ba39cd3b2b471cd8efc2" theme={defaultTheme}>
-        <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
-          <ProgressBar bgcolor="#00bbff" />
-          <ScrollTop />
-          <Head>
-            <meta content="width=device-width, initial-scale=1" name="viewport" />
-          </Head>
-          {isDevelopment && isSocket && <ClientReload />}
-          <LayoutWrapper>
-            <Component {...pageProps} />
-          </LayoutWrapper>
-        </ThemeProvider>
-      </Provider>
-    </SessionProvider>
+    <ThemeProvider attribute="class" defaultTheme={siteMetadata.theme}>
+      <ProgressBar bgcolor="#2B6E6E" />
+      <ScrollTop />
+      <Head>
+        <meta content="width=device-width, initial-scale=1" name="viewport" />
+      </Head>
+      {isDevelopment && isSocket && <ClientReload />}
+      <LayoutWrapper>
+        <Component {...pageProps} />
+      </LayoutWrapper>
+    </ThemeProvider>
   )
 }

@@ -1,39 +1,19 @@
-import { currentDayName } from '@/lib/utils/dateUtils'
 import Link from './Link'
-// import NowPlayingFooter from './NowPlayingFooter'
 
 export default function Footer() {
   return (
-    <footer>
-      <div className="mt-10 flex flex-col items-center">
-        {/* <div className="">
-          <NowPlayingFooter />
-        </div> */}
-        <div className="mb-2 hidden text-sm text-gray-500 dark:text-gray-400 md:flex">
-          <div className="mx-1">
-            <Link href="https://jsamek.vercel.app" className="link-underline">
-              Jordan Samek{` © ${new Date().getFullYear()}`}
-            </Link>
-          </div>
-          {`•`}
-          <div className="mx-1">
-            <Link href="https://qod.shakiltech.com/" className="link-underline">
-              Have a good {currentDayName()}!
-            </Link>
-          </div>
-          {`•`}
-          <div className="mx-1">
-            <Link href="/contact" className="link-underline">
-              Contact
-            </Link>
-          </div>
-        </div>
-        <div className="mb-2 text-sm text-gray-500 dark:text-gray-400 sm:block md:hidden lg:hidden">
-          <div className="mx-1">
-            <Link href="https://jsamek.vercel.app" className="link-underline">
-              Jordan{` © ${new Date().getFullYear()}`}
-            </Link>
-          </div>
+    <footer className="mt-20 border-t border-rule py-8 dark:border-rule-dark">
+      <div className="flex flex-col items-center gap-1 font-mono text-xs text-ink-soft dark:text-ink-soft-dark sm:flex-row sm:justify-between sm:gap-0">
+        <Link href="/" className="link-underline">
+          Jordan Samek &copy; {new Date().getFullYear()}
+        </Link>
+        <div className="flex items-center gap-4">
+          <Link href="/contact" className="link-underline">
+            Contact
+          </Link>
+          <Link href="/feed.xml" className="link-underline">
+            RSS
+          </Link>
         </div>
       </div>
     </footer>

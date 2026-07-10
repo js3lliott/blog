@@ -6,26 +6,24 @@ const Contact = () => {
   return (
     <>
       <PageSEO title={`Contact - ${siteMetadata.author}`} description="All my contacts" />
-      <div className="mx-auto max-w-3xl overflow-hidden">
-        <h1 className="text-3xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 sm:text-4xl sm:leading-10 md:text-5xl md:leading-14">
+      <div className="pb-24">
+        <div className="mb-3 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-highlight dark:text-highlight-dark">
+          <span className="inline-block h-px w-4 bg-highlight dark:bg-highlight-dark" />
+          Say hello
+        </div>
+        <h1 className="mb-10 font-serif text-4xl font-medium text-ink dark:text-ink-dark sm:text-5xl">
           Contact
         </h1>
-        <div className="pt-10 pb-8">
-          <ul className="font-semi-bold flex flex-col space-y-4">
-            <ContactLink href="mailto:jordan.samek@gmail.com" title="gmail" icon="jordan.samek" />
-            <ContactLink href="https://github.com/js3lliott" title="github" icon="js3lliott" />
-            <ContactLink
-              href="https://twitter.com/samekjordan"
-              title="twitter"
-              icon="samekjordan"
-            />
-            <ContactLink
-              href="https://www.linkedin.com/in/jordan-samek/"
-              title="linkedin"
-              icon="jordan-samek"
-            />
-          </ul>
-        </div>
+        <ul className="flex flex-col gap-5 border-t border-rule pt-8 dark:border-rule-dark">
+          <ContactLink href="mailto:jordan.samek@gmail.com" title="gmail" icon="jordan.samek" />
+          <ContactLink href="https://github.com/js3lliott" title="github" icon="js3lliott" />
+          <ContactLink href="https://twitter.com/samekjordan" title="twitter" icon="samekjordan" />
+          <ContactLink
+            href="https://www.linkedin.com/in/jordan-samek/"
+            title="linkedin"
+            icon="jordan-samek"
+          />
+        </ul>
       </div>
     </>
   )

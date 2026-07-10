@@ -127,17 +127,21 @@ export default function Now(currentlyReading) {
         description="What I'm working on now"
         url={siteMetadata.url}
       />
-      <div>
-        <div className="my-2">
-          <h3>Where am I and what am I doing?</h3>
-          <div className=" mt-4 mb-6 text-xs text-neutral-700 dark:text-neutral-400">
-            This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
-          </div>
+      <div className="pb-24">
+        <div className="mb-3 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-highlight dark:text-highlight-dark">
+          <span className="inline-block h-px w-4 bg-highlight dark:bg-highlight-dark" />
+          Entry &middot; Now
+        </div>
+        <h1 className="mb-4 font-serif text-4xl font-medium text-ink dark:text-ink-dark sm:text-5xl">
+          Where am I and what am I doing?
+        </h1>
+        <div className="mb-8 font-mono text-xs text-ink-soft dark:text-ink-soft-dark">
+          This page was automatically updated @ {date}-{month}-{year} {hour}:{minute}:{second}
         </div>
         {/* Misc */}
         <div>
           <div className="flex justify-between gap-5">
-            <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mt-2 mb-10 w-1/2 rounded-md border border-rule p-1 text-sm dark:border-rule-dark">
               <span className="ml-2 font-semibold">Location:</span>{' '}
               <span>Kitchener, Ontario, Canada</span>
               <br />
@@ -156,13 +160,13 @@ export default function Now(currentlyReading) {
               </span>
             </div>
 
-            <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mt-2 mb-10 w-1/2 rounded-md border border-rule p-1 text-sm dark:border-rule-dark">
               <span className="ml-2 font-semibold">Age:</span> <span>{ageString}</span>
             </div>
           </div>
 
           <div className="-my-6 flex justify-between gap-5">
-            <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mt-2 mb-10 w-1/2 rounded-md border border-rule p-1 text-sm dark:border-rule-dark">
               <span className="ml-2 font-semibold">Date:</span>{' '}
               <span>{TodayDate.format('DD/MM/YYYY')}</span>
               <br />
@@ -173,7 +177,7 @@ export default function Now(currentlyReading) {
               </span>
             </div>
 
-            <div className="mt-2 mb-10 w-1/2 rounded-md border border-gray-600 p-1 text-sm dark:border-gray-200">
+            <div className="mt-2 mb-10 w-1/2 rounded-md border border-rule p-1 text-sm dark:border-rule-dark">
               <span className="ml-2 font-semibold">Listening:</span>{' '}
               <span>
                 {data?.songUrl ? (
@@ -194,7 +198,7 @@ export default function Now(currentlyReading) {
             </div>
           </div>
         </div>
-        <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+        <div className="justify-center text-center text-2xl font-medium text-rule dark:text-rule-dark">
           &#126;&#126;&#126;
         </div>
         {/* Work */}
@@ -218,7 +222,7 @@ export default function Now(currentlyReading) {
             methods.
           </p>
         </div>
-        <div className="justify-center text-center text-2xl font-medium text-gray-200 dark:text-gray-600">
+        <div className="justify-center text-center text-2xl font-medium text-rule dark:text-rule-dark">
           &#126;&#126;&#126;
         </div>
 

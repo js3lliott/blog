@@ -95,19 +95,14 @@ class MyDocument extends Document {
           />
           <link rel="manifest" href="/static/favicons/site.webmanifest" />
           <link rel="mask-icon" href="/static/favicons/safari-pinned-tab.svg" color="#5bbad5" />
-          <meta name="msapplication-TileColor" content="#000000" />
-          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#fff" />
-          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#000" />
+          <meta name="msapplication-TileColor" content="#14140F" />
+          <meta name="theme-color" media="(prefers-color-scheme: light)" content="#F6F4EE" />
+          <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#14140F" />
           <meta
             name="description"
             content="Welcome to my personal blog where I share my musings. I am a Data Engineer passionate about Data Science, building pipelines and Automation."
           />
           <link rel="alternate" type="application/rss+xml" href="/feed.xml" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
-            rel="stylesheet"
-          />
           <link
             rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/katex@0.13.11/dist/katex.min.css"
@@ -120,7 +115,7 @@ class MyDocument extends Document {
             content="_Ba0lKk4Dl9XMvABJ9gZEtoMPITT5Vr5TGx2M-34Z_I"
           />
         </Head>
-        <body className="bg-white text-black antialiased dark:bg-background-color dark:text-white">
+        <body className="bg-paper text-ink antialiased dark:bg-paper-dark dark:text-ink-dark">
           <Main />
           <NextScript />
         </body>

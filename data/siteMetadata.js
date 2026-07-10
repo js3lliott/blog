@@ -1,6 +1,6 @@
 const siteMetadata = {
   title: 'Blog | Jordan Samek',
-  author: 'Jorda Samek',
+  author: 'Jordan Samek',
   headerTitle: 'My thoughts and experiments',
   description: 'my personal blog where I share my thoughts',
   snippets: 'Reuseable code snippets collected by me',

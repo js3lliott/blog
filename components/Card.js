@@ -1,31 +1,25 @@
 import SocialIcon from './social-icons'
-import FolderIcon from './icon'
 
-const Card = ({ title, description, imgSrc, href, github, tech1, tech2, tech3 }) => (
-  <div className="md p-4 md:w-1/2" style={{ maxWidth: '544px' }}>
-    <div className="h-full transform overflow-hidden rounded-md border-2 border-solid border-gray-200 bg-transparent bg-opacity-20 transition duration-500 hover:scale-105 hover:rounded-md hover:border-primary-500 hover:bg-gray-300 dark:border-gray-700 dark:hover:border-primary-500 dark:hover:bg-gray-800">
-      <div className="p-6">
-        <div className="flex flex-row items-center justify-between">
-          <div className="my-2">
-            <FolderIcon />
-          </div>
-          <div className="flex flex-row justify-between">
-            <div className="mx-1.5">
-              {href ? <SocialIcon kind="external" href={href} size="6" /> : null}
-            </div>
-            <div className="mx-1.5">
-              {github ? <SocialIcon kind="github" href={github} size="6" /> : null}
-            </div>
-          </div>
-        </div>
-        <h2 className="mb-3 text-2xl font-bold leading-8 tracking-tight">{title}</h2>
-
-        <p className="prose mb-3 max-w-none text-gray-500 dark:text-gray-400">{description}</p>
-        <div className="flex flex-row justify-between">
-          <div className="text-sm text-gray-400">
-            {tech1} &#8226; {tech2} &#8226; {tech3}
-          </div>
-        </div>
+const Card = ({ title, description, href, github, tech1, tech2, tech3 }) => (
+  <div className="grid grid-cols-1 gap-3 border-b border-rule py-8 first:pt-0 last:border-b-0 dark:border-rule-dark sm:grid-cols-[96px_1fr]">
+    <div className="flex gap-2 sm:flex-col sm:gap-3">
+      {href ? <SocialIcon kind="external" href={href} size="5" /> : null}
+      {github ? <SocialIcon kind="github" href={github} size="5" /> : null}
+    </div>
+    <div>
+      <h2 className="mb-2 text-xl font-semibold text-ink dark:text-ink-dark">{title}</h2>
+      <p className="mb-3 max-w-2xl text-sm leading-relaxed text-ink-soft dark:text-ink-soft-dark">
+        {description}
+      </p>
+      <div className="flex flex-wrap gap-2 font-mono text-[11px] text-ink-soft dark:text-ink-soft-dark">
+        {[tech1, tech2, tech3].filter(Boolean).map((tech) => (
+          <span
+            key={tech}
+            className="rounded border border-rule bg-card px-2 py-0.5 dark:border-rule-dark dark:bg-card-dark"
+          >
+            {tech}
+          </span>
+        ))}
       </div>
     </div>
   </div>

@@ -6,33 +6,23 @@ export default function FourZeroFour() {
   return (
     <>
       <PageSEO title={`Page Not Found - ${siteMetadata.title}`} />
-      <div className="flex flex-col items-start justify-start md:mt-24 md:flex-row md:items-center md:justify-center md:space-x-6">
-        <div className="space-x-2 pt-6 pb-8 md:space-y-5">
-          <h1 className="text-6xl font-extrabold leading-9 tracking-tight text-gray-900 dark:text-gray-100 md:px-3 md:text-8xl md:leading-14">
-            404
-          </h1>
+      <div className="flex flex-col items-center py-24 text-center">
+        <div className="mb-3 flex items-center gap-2 font-mono text-xs uppercase tracking-[0.14em] text-highlight dark:text-highlight-dark">
+          <span className="inline-block h-px w-4 bg-highlight dark:bg-highlight-dark" />
+          Entry not found
         </div>
-        <div className="mx-auto max-w-2xl">
-          <div className="md:border-l-2 md:px-6">
-            <p className="mb-4 text-xl font-bold leading-normal md:text-2xl">
-              Unavailable For Legal Reasons
-            </p>
-            <p className="mb-4">
-              Why show a generic 404 when I can make it sound mysterious? It seems you've found
-              something that used to exist, or you spelled something wrong. I'm guessing you spelled
-              something wrong. Can you double check that URL?
-            </p>
-            <p>But dont worry, you can find plenty of other things on our homepage.</p>
-          </div>
-        </div>
-      </div>
-      <div className="mt-16 grid place-items-center">
-        <Link href="/">
-          <button aria-label="Scroll To Top" type="button" className="pushable">
-            <span className="shadow"></span>
-            <span className="edgeblue"></span>
-            <span className="frontblue">Return to Homepage</span>
-          </button>
+        <h1 className="mb-6 font-serif text-7xl font-medium text-ink dark:text-ink-dark sm:text-8xl">
+          404
+        </h1>
+        <p className="mb-10 max-w-md text-ink-soft dark:text-ink-soft-dark">
+          Nothing&rsquo;s logged at this page. It may have moved, or the URL might have a typo
+          &mdash; double check it and try again.
+        </p>
+        <Link
+          href="/"
+          className="rounded-md bg-accent px-6 py-3 font-mono text-sm text-paper transition-colors hover:bg-accent-dark dark:bg-accent-dark dark:text-ink dark:hover:bg-accent"
+        >
+          &larr; Return to homepage
         </Link>
       </div>
     </>

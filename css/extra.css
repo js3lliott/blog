@@ -31,7 +31,7 @@ input:-webkit-autofill:focus {
 }
 
 #nprogress .bar {
-  background: #00bbff;
+  background: #2b6e6e;
 
   position: fixed;
   z-index: 1031;
@@ -49,7 +49,7 @@ input:-webkit-autofill:focus {
   right: 0px;
   width: 100px;
   height: 100%;
-  box-shadow: 0 0 10px #00bbff, 0 0 5px #00bbff;
+  box-shadow: 0 0 10px #2b6e6e, 0 0 5px #2b6e6e;
   opacity: 1;
 
   -webkit-transform: rotate(3deg) translate(0px, -4px);
@@ -72,8 +72,8 @@ input:-webkit-autofill:focus {
   box-sizing: border-box;
 
   border: solid 2px transparent;
-  border-top-color: #00bbff;
-  border-left-color: #00bbff;
+  border-top-color: #2b6e6e;
+  border-left-color: #2b6e6e;
   border-radius: 50%;
 
   -webkit-animation: nprogress-spinner 400ms linear infinite;
@@ -119,7 +119,7 @@ input:-webkit-autofill:focus {
   display: block;
   margin-top: 5px;
   right: 0;
-  background: linear-gradient(transparent, transparent), linear-gradient(to right, #407ef1, #48ece4);
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #2b6e6e, #a8763e);
   transition: width 0.25s ease;
   -webkit-transition: width 0.25s ease;
 }
@@ -127,7 +127,7 @@ input:-webkit-autofill:focus {
 .link-underline:hover:after {
   width: 100%;
   left: 0;
-  background: linear-gradient(transparent, transparent), linear-gradient(to right, #407ef1, #48ece4);
+  background: linear-gradient(transparent, transparent), linear-gradient(to right, #2b6e6e, #a8763e);
 }
 
 .pushable {
@@ -207,23 +207,17 @@ input:-webkit-autofill:focus {
   left: 0;
   width: 100%;
   height: 100%;
-  border-radius: 25px;
-  background: linear-gradient(
-    to left,
-    hsl(210deg 84% 16%) 0%,
-    hsl(210deg 84% 32%) 8%,
-    hsl(210deg 84% 32%) 92%,
-    hsl(210deg 84% 16%) 100%
-  );
+  border-radius: 8px;
+  background: linear-gradient(to left, #16302f 0%, #1e4a49 8%, #1e4a49 92%, #16302f 100%);
 }
 .frontblue {
   display: block;
   position: relative;
   padding: 14px 14px;
-  border-radius: 25px;
+  border-radius: 8px;
   font-size: 1.25rem;
-  color: white;
-  background: hsl(216, 84%, 47%);
+  color: #f6f4ee;
+  background: #2b6e6e;
   will-change: transform;
   transform: translateY(-4px);
   transition: transform 600ms cubic-bezier(0.3, 0.7, 0.4, 1);
